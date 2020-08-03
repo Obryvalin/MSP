@@ -26,7 +26,7 @@ const load = (callback)=>{
                     pgsql.addData(json,()=>{
                         log.timestamp("File "+ chalk.bold(file)+" added")
                     })
-                    fs.writeFile(path.join(dataDir,file).replace(".xml",".json"),JSON.stringify(json),()=>{})
+                    // fs.writeFile(path.join(dataDir,file).replace(".xml",".json"),JSON.stringify(json),()=>{})
                 })
             })
            
