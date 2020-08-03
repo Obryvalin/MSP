@@ -22,6 +22,7 @@ const load = (callback) => {
     files.forEach((file) => {
       log.timestamp("File: " + chalk.bold(file));
       let filecontent = fs.readFileSync(path.join(dataDir, file));
+      
       if (err) {
         log.timestamp(chalk.red("Error in " + file + ": " + err));
       }
@@ -31,6 +32,7 @@ const load = (callback) => {
         }
         pgsql.addData(json, (err, resarray) => {
           queries = queries.concat(resarray);
+          filecontent = ""
           log.timestamp(
             "File " + chalk.bold(file) + " added (" + resarray.length + " sqls)"
           );

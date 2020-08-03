@@ -117,7 +117,7 @@ const logError = (error) =>{
 //-------------------------------------------------------------------------------------------------------
 
 const addData = (json,callback) =>{
-  resarray =[]
+  let resarray =[]
     njson = msp.map(json)
     if (njson.documents){
         if(Array.isArray){
