@@ -19,7 +19,7 @@ const load = (callback)=>{
         log.timestamp("Files found:"+ files.length)
         files.forEach((file)=>{
             log.timestamp("File: "+ chalk.bold(file))
-            fs.readFile(path.join(dataDir,file),(err,filecontent)=>{
+            let filecontent = fs.readFileSync(path.join(dataDir,file))
                 if (err) {log.timestamp(chalk.red("Error in "+ file + ": "+err))}
                 xml.toJSON(filecontent.toString(),(err,json)=>{
                     if (err){log.timestamp(chalk.red("Error in "+ file + ": "+err))}
@@ -28,11 +28,11 @@ const load = (callback)=>{
                     })
                     // fs.writeFile(path.join(dataDir,file).replace(".xml",".json"),JSON.stringify(json),()=>{})
                 })
-            })
+            }) 
            
            
             
-        })
+       
     })
 }
 command = process.argv[2]
