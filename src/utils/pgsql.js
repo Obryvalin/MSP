@@ -158,16 +158,18 @@ const addData = (json,callback) =>{
         resarray.push(sql)
     }
   }
-  multiquery(resarray,(err,res)=>{
-    if (err){
-      console.log(err)
-    }
-    if (callback){callback();}
-  })
+  callback(undefined,resarray)
+  // multiquery(resarray,(err,res)=>{
+  //   if (err){
+  //     console.log(err)
+  //   }
+  //   if (callback){callback();}
+  // })
 }
 
 module.exports = {
     init:init,
     backup:backup,
-    addData:addData
+    addData:addData,
+    multiquery:multiquery
 }
