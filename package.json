@@ -1,0 +1,19 @@
+{
+  "name": "msp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src\\app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "OBR",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "date-format": "^3.0.0",
+    "fast-xml-parser": "^3.17.4",
+    "map-factory": "^3.8.3",
+    "pg": "^8.3.0"
+  }
+}

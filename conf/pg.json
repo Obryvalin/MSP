@@ -1,0 +1,22 @@
+{
+    "user": "postgres",
+    "password": "postgres",
+
+    "host": "localhost",
+    "port": 1988,
+    "database": "MSP",
+    "backupdir":"\\..\\..\\backup",
+    
+    "dropQueries":[
+      "DROP TABLE public.document",
+      "DROP TABLE public.okved",
+      "DROP TABLE public.licences",
+      "DROP TABLE public.errorlog"
+    ],
+    "createQueries":[
+      "create table document (id character varying(36),actualdate character varying(10),startdate character varying(10),subjtype double precision,subjcategory double precision,subjnew double precision,subjcategorydesc character varying(20),inn character varying(12),sname character varying(50),fname character varying(50),pname character varying(50),region character varying(2),orgname character varying(250),shortname character varying(100),type character varying(2))",
+      "create table okved(id character varying(36),code character varying(10),okved character varying(500),version double precision,ismain double precision)",
+      "create table licences (id character varying(36), licname character varying(50), licdate character varying(10), licdatestart character varying(10), licdateend character varying(10), licdesc character varying(500), licadr character varying(500))",
+      "CREATE TABLE public.errorlog (error character varying, datetime timestamp with time zone)"
+    ]
+  }
