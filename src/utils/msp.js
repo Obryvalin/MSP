@@ -49,10 +49,11 @@ const map = (json) => {
         document.type="UL"
     }
 
-
-    document["СвОКВЭД"]["СвОКВЭДОсн"].id = document.id;
-    document["СвОКВЭД"]["СвОКВЭДОсн"].isMain = 1;
-    rokveds.push( document["СвОКВЭД"]["СвОКВЭДОсн"])
+    if (document["СвОКВЭД"]["СвОКВЭДОсн"]){
+      document["СвОКВЭД"]["СвОКВЭДОсн"].id = document.id;
+      document["СвОКВЭД"]["СвОКВЭДОсн"].isMain = 1;
+      rokveds.push( document["СвОКВЭД"]["СвОКВЭДОсн"])
+    }
     if (document["СвОКВЭД"]["СвОКВЭДДоп"]) {
       let okveds = document["СвОКВЭД"]["СвОКВЭДДоп"];
       
