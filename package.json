@@ -12,7 +12,7 @@
   "dependencies": {
     "chalk": "^4.1.0",
     "date-format": "^3.0.0",
-    "fast-xml-parser": "^3.17.4",
+    "fast-xml-parser": "^4.2.4",
     "map-factory": "^3.8.3",
     "pg": "^8.3.0"
   }
